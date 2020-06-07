@@ -1,13 +1,18 @@
 export default {
   colors: {
-    PRIMARY: '#404CB2',
-    BG_PRIMARY: '#243972',
-    BG_SECONDARY: '#222',
-    BG_SEPARATOR: '#222',
+    //BG
+    PRIMARY: '#546A7B',
+    BG_PRIMARY: '#0D1F2D',
+    BG_SECONDARY: '#2b2d42',
+    BG_SEPARATOR: '#DDDDDD',
     BG_WHITE: '#FFFFFF',
-    TEXT_DEFAULT: '#eee',
-    TEXT_DISABLE: '#94AFB6',
+
+    // Textos
+    TEXT_DEFAULT: '#FAE1DF',
+    TEXT_DISABLE: '#9EA3B0',
     PRIMARY_CLOUD: '#A8ADDD',
+
+    // Despesa e receitas
     INCOME: '#41BE06',
     SPENDING: '#EB1F39',
   },
