@@ -1,0 +1,16 @@
+export default {
+  900: 'Nunito-Black',
+  I900: 'Nunito-BlackItalic',
+  800: 'Nunito-ExtraBold',
+  I800: 'Nunito-ExtraBoldItalic',
+  700: 'Nunito-Bold',
+  I700: 'Nunito-BoldItalic',
+  600: 'Nunito-SemiBold',
+  I600: 'Nunito-SemiBoldItalic',
+  400: 'Nunito-Regular',
+  I400: 'Nunito-RegularItalic',
+  300: 'Nunito-Light',
+  I300: 'Nunito-LightItalic',
+  200: 'Nunito-ExtraLight',
+  I200: 'Nunito-ExtraLightItalic',
+};

@@ -28,4 +28,5 @@ export default Object.freeze({
   user: new StorageObject('user'),
   userToken: new StorageItem('userToken'),
   isFirstTime: new StorageItem('isFirstTime'),
+  theme: new StorageObject('theme'),
 });

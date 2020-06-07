@@ -3,6 +3,7 @@ import React from 'react';
 import { ActivityIndicator, View } from 'react-native';
 import AppRoutes from './app.routes';
 import AuthRoutes from './auth.routes';
+import { useTheme } from '@react-navigation/native';
 
 const Routes: React.FC = () => {
   const { signed, loading } = useAuth();

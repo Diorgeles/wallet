@@ -23,5 +23,6 @@
     "metro.config.js",
     "jest.config.js"
   ],
-  "include": ["src"]
+  "include": ["src"],
+  "files": ["src/resources/styled.d.ts"]
 }
