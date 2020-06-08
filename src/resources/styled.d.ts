@@ -2,6 +2,7 @@ import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    titleTheme: string;
     handleSetTheme(theme: string): void;
     fonts: {
       /**@alias Black */
