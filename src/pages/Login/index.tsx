@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Icon, Image, Divider } from 'react-native-elements';
+import { Icon, Image } from 'react-native-elements';
 import { Platform } from 'react-native';
 import {
   Container,
@@ -13,6 +13,7 @@ import {
   Footer,
   ButtonSingUp,
   ButtonSingIn,
+  Divider,
 } from './styles';
 import { useTheme } from 'styled-components';
 

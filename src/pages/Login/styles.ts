@@ -1,6 +1,10 @@
 import styled from 'styled-components/native';
 import { Dimensions } from 'react-native';
-import { Button, Input } from 'react-native-elements';
+import {
+  Button,
+  Input,
+  Divider as ElementsDivider,
+} from 'react-native-elements';
 
 const { width } = Dimensions.get('window');
 
@@ -36,6 +40,10 @@ export const HeaderContentFieldGroup = styled.View`
   border-radius: 4px;
   margin-bottom: 15px;
   elevation: 5;
+`;
+
+export const Divider = styled(ElementsDivider)`
+  background-color: ${({ theme }) => theme.colors.BG_SEPARATOR};
 `;
 
 export const MyInput = styled(Input).attrs(({ theme }) => ({

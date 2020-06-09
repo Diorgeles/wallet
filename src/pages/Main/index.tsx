@@ -1,9 +1,24 @@
 import React from 'react';
-
-import { Text } from 'react-native-elements';
+import {
+  Container,
+  StatusBar,
+  ContentChart,
+  ContentChartHeader,
+  Divider,
+  Text,
+} from './styles';
 
 const Main = () => {
-  return <Text>Hello</Text>;
+  return (
+    <Container>
+      <StatusBar />
+      <ContentChart>
+        <ContentChartHeader></ContentChartHeader>
+        <Divider />
+        <Text>GRÁFICOS</Text>
+      </ContentChart>
+    </Container>
+  );
 };
 
 export default Main;
