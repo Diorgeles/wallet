@@ -5,24 +5,16 @@ import { Dimensions } from 'react-native';
 import MyBadge from 'components/badge/';
 import { useTheme } from 'styled-components/native';
 import GridEntry from 'components/gridEntry';
-import { BarChart } from 'react-native-chart-kit';
+import { StackedBarChart } from 'react-native-chart-kit';
+import { shade } from 'polished';
 
-const { height, width } = Dimensions.get('window');
+const { height } = Dimensions.get('window');
 
 const Main = () => {
   const { colors, fonts } = useTheme();
   const [incomeFilter, setIncomeFilter] = useState(false);
   const [spendingFilter, setSpendingFilter] = useState(false);
   const [allFilter, setAllFilter] = useState(true);
-
-  const data = {
-    labels: ['Receita', 'Despesa'],
-    datasets: [
-      {
-        data: [5700, 4000],
-      },
-    ],
-  };
 
   const handleSetFilter = (_filter: string) => {
     switch (_filter) {
@@ -60,24 +52,33 @@ const Main = () => {
             </>
           }>
           <GridEntry />
-          <BarChart
-            fromZero
-            segments={3}
-            width={300}
+          <StackedBarChart
+            data={{
+              labels: ['Inter', 'Carteira'],
+              legend: ['Receita', 'Despesa'],
+              data: [
+                [700, 400],
+                [800, 400],
+              ],
+              barColors: [shade(0.1, '#A7DE68'), shade(0.1, '#EB8E9F')],
+            }}
+            width={320}
             height={200}
-            data={data}
             chartConfig={{
-              backgroundColor: '#ffffff',
-              backgroundGradientFrom: '#ffffff',
-              backgroundGradientTo: '#ffffff',
-              color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+              backgroundGradientFrom: colors.BG_WHITE,
+              backgroundGradientTo: colors.BG_WHITE,
+              color: (opacity = 0) => `rgba(0, 0, 0, ${opacity})`,
               labelColor: () => colors.TEXT_DEFAULT,
-              linejoinType: 'square',
+              barPercentage: 1.2,
+              barRadius: 2,
+              propsForLabels: { fontSize: 10, fontFamily: fonts[700] },
             }}
             style={{
               marginVertical: 25,
-              marginHorizontal: 25,
+              elevation: 5,
             }}
+            hideLegend={false}
+            segments={3}
           />
         </MyBox>
         <MyBox
